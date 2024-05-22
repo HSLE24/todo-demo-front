@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import api from "../utils/api";
 
-const TodoItem = ({ item, getTasks }) => {
+const TodoItem = ({ item, tag, getTasks }) => {
   const updateTask = async () => {
     try {
       const response = await api.put(`/tasks/${item._id}`);
@@ -36,15 +36,19 @@ const TodoItem = ({ item, getTasks }) => {
   return (
     <Row>
       <Col xs={12}>
-        <div className={`todo-item`}>
+        <div
+          className={`${
+            item.isComplete ? "item-complete" : ""
+          } todo-item ${tag}`}
+        >
           <div className="todo-content">{item.task}</div>
 
           <div>
+            <button className="button-delete" onClick={updateTask}>
+              {item.isComplete ? "안끝남" : "끝남"}
+            </button>
             <button className="button-delete" onClick={deleteTask}>
               삭제
-            </button>
-            <button className="button-delete" onClick={updateTask}>
-              {item.isComplete ? "끝남" : "안끝남"}
             </button>
           </div>
         </div>

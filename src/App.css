@@ -1,29 +1,38 @@
 body {
-  color: lightblue !important ;
-  background-color: aliceblue !important;
+  color: #50586c !important ;
+  background-color: #dce2f0 !important;
 }
 .container {
   margin-bottom: 60px;
 }
 
 .todo-item {
-  border: 1px solid lightblue;
+  border: 1px solid #50586c;
+  border-top: none;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.todo-item.first {
+  border: 1px solid #50586c;
+}
+.title {
+  margin-top: 20px !important;
+  font-weight: bold;
+}
+
 .todo-content {
   padding: 1em;
 }
 .add-item-row {
-  margin-top: 50px !important;
+  margin-top: 20px !important;
   margin-bottom: 30px;
 }
 .input-box {
   padding: 10px;
   width: 100%;
-  border: 1px solid lightblue;
+  border: 1px solid #50586c;
   border-radius: 5px;
 }
 .input-box:focus {
@@ -36,27 +45,50 @@ body {
   height: 45px;
   width: 100%;
   border: none;
-  background-color: lightblue;
+  background-color: #50586c;
   color: white;
   border-radius: 5px;
 }
 .button-add:hover {
   background-color: white;
-  color: lightblue;
-  border: 2px solid lightblue;
+  color: #50586c;
+  border: 2px solid #50586c;
 }
 .button-delete {
   background-color: white;
-  border: 2px solid lightblue;
-  color: lightblue;
+  border: 2px solid #50586c;
+  color: #50586c;
   margin: 10px;
+  border-radius: 3px;
 }
 .button-delete:hover {
-  background-color: lightblue;
+  background-color: #50586c;
   color: #ffffff;
 }
 
 .item-complete {
   background-color: gainsboro;
-  color: white;
+  color: gray;
+}
+
+.category {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.category li {
+  float: left;
+  background-color: rgb(238, 238, 238);
+  width: 20%;
+  text-align: center;
+  cursor: pointer;
+  border-right: 1px solid #ddd;
+  padding: 5px;
+  border-top: 2px solid rgb(238, 238, 238);
+  border-radius: 3px 3px 0 0;
+}
+.category li.active {
+  background-color: white;
+  border-top: 2px solid crimson;
 }

@@ -50,11 +50,12 @@ function App() {
 
   return (
     <Container className="container">
+      <h2 className="title">Todo List</h2>
       <Row className="add-item-row">
         <Col xs={12} sm={10}>
           <input
             type="text"
-            placeholder="할일을 입력하세요"
+            placeholder="할 일을 입력하세요"
             className="input-box"
             value={todoValue}
             onChange={(event) => setTodoValue(event.target.value)}

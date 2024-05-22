@@ -92,3 +92,6 @@ body {
   background-color: white;
   border-top: 2px solid crimson;
 }
+.category li:hover {
+  background-color: white;
+}

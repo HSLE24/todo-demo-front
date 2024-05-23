@@ -95,3 +95,16 @@ body {
 .category li:hover {
   background-color: white;
 }
+
+.login-box {
+  width: 40%;
+  margin-top: 10px;
+}
+.display-center {
+  display: flex;
+  justify-content: center;
+}
+.error {
+  color: red;
+  font-size: 10px;
+}

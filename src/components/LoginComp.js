@@ -21,7 +21,10 @@ const LoginComp = ({ loginUser, name, error }) => {
         <div className="info">반갑습니다. {name ? name + "님" : "고객님"}</div>
       </div>
       <div className="input-area">
-        <div className={error ? "alarm" : "disable"}>{error ? error : "-"}</div>
+        <span className={error ? "alarm" : "disable"}>
+          {error ? error : "-"}
+        </span>
+        <br />
         <input
           ref={inputRef}
           type="password"

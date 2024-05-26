@@ -31,7 +31,10 @@ const RegisterComp = ({ registerUser, error }) => {
         <div className="info">1번만 입력하니 정확히 입력해주세요:)</div>
       </div>
       <div className="input-area">
-        <div className={error ? "alarm" : "disable"}>{error ? error : "-"}</div>
+        <span className={error ? "alarm" : "disable"}>
+          {error ? error : "-"}
+        </span>
+        <br />
         <div className="input-layer">
           <input
             ref={inputRef}

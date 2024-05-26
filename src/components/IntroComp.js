@@ -15,7 +15,10 @@ const IntroComp = ({ checkUser, error }) => {
         <div className="info">로그인 또는 회원가입에 필요합니다.</div>
       </div>
       <div className="input-area">
-        <div className={error ? "alarm" : "disable"}>{error ? error : "-"}</div>
+        <span className={error ? "alarm" : "disable"}>
+          {error ? error : "-"}
+        </span>
+        <br />
         <input
           type="text"
           placeholder="welcome@todo.com"

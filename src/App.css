@@ -186,17 +186,14 @@ body {
 .intro-area .info {
   font-size: 16px;
   color: gray;
-  padding-left: 2px;
 }
 .intro-area .alarm {
   font-size: 16px;
-  padding-left: 2px;
   color: red;
 }
 .intro-area .disable {
   font-size: 16px;
   color: white;
-  padding-left: 2px;
 }
 
 .login-area div:first-child {
@@ -261,16 +258,13 @@ body {
 .login-area .info {
   font-size: 16px;
   color: gray;
-  padding-left: 2px;
 }
 .login-area .alarm {
   font-size: 16px;
-  padding-left: 2px;
   color: red;
 }
 .login-area .disable {
   font-size: 16px;
-  padding-left: 2px;
   color: white;
 }
 

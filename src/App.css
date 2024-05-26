@@ -21,6 +21,23 @@ body {
   margin-top: 20px !important;
   font-weight: bold;
 }
+.title-login {
+  margin-top: 25px !important;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+.title-area {
+  display: flex;
+  justify-content: space-between;
+}
+.title-area .link-item {
+  text-decoration: none;
+  color: #50586c;
+}
+.title-area .link-item:hover {
+  color: #1b2233;
+}
 
 .todo-content {
   padding: 1em;
@@ -94,4 +111,178 @@ body {
 }
 .category li:hover {
   background-color: white;
+}
+
+.common-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.intro-area,
+.login-area,
+.register-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 400px;
+  width: 400px;
+  border: 1px solid #50586c;
+  background-color: white;
+  border-radius: 10px;
+}
+.intro-area div:first-child {
+  margin-top: 20px;
+  width: 90%;
+  margin-left: 30px;
+}
+.intro-area .input-area {
+  width: 90%;
+  margin-left: 30px;
+}
+.intro-area input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #50586c;
+  margin-top: 10px;
+}
+.intro-area input[type="text"]:focus {
+  outline: none;
+}
+.intro-area input[type="text"]:focus::placeholder {
+  color: white;
+}
+.intro-area input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #50586c;
+  margin-top: 10px;
+}
+.intro-area input[type="password"]:focus {
+  outline: none;
+}
+.intro-area input[type="password"]:focus::placeholder {
+  color: white;
+}
+.intro-area button {
+  width: 90%;
+  height: 45px;
+  border: none;
+  background-color: #50586c;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.intro-area button:hover {
+  background-color: white;
+  color: #50586c;
+  border: 2px solid #50586c;
+}
+.intro-area .info {
+  font-size: 16px;
+  color: gray;
+  padding-left: 2px;
+}
+.intro-area .alarm {
+  font-size: 16px;
+  padding-left: 2px;
+  color: red;
+}
+.intro-area .disable {
+  font-size: 16px;
+  color: white;
+  padding-left: 2px;
+}
+
+.login-area div:first-child {
+  margin-top: 20px;
+  width: 90%;
+}
+.login-area .input-area {
+  width: 90%;
+  margin-left: 30px;
+}
+.login-area input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #50586c;
+  margin-top: 10px;
+}
+.login-area input[type="text"]:focus {
+  outline: none;
+}
+.login-area input[type="text"]:focus::placeholder {
+  color: white;
+}
+.login-area input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #50586c;
+  margin-top: 10px;
+}
+.login-area input[type="password"]:focus {
+  outline: none;
+}
+.login-area input[type="password"]:focus::placeholder {
+  color: white;
+}
+.login-area input[type="checkbox"] {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.login-area label {
+  color: gray;
+  margin-left: 5px;
+  font-size: 13px;
+}
+.login-area button {
+  width: 90%;
+  height: 45px;
+  border: none;
+  background-color: #50586c;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.login-area button:hover {
+  background-color: white;
+  color: #50586c;
+  border: 2px solid #50586c;
+}
+.login-area .info {
+  font-size: 16px;
+  color: gray;
+  padding-left: 2px;
+}
+.login-area .alarm {
+  font-size: 16px;
+  padding-left: 2px;
+  color: red;
+}
+.login-area .disable {
+  font-size: 16px;
+  padding-left: 2px;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .intro-area,
+  .login-area,
+  .register-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100vh;
+  }
 }

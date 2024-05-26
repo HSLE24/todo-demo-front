@@ -41,7 +41,9 @@ const TodoItem = ({ item, tag, getTasks }) => {
             item.isComplete ? "item-complete" : ""
           } todo-item ${tag}`}
         >
-          <div className="todo-content">{item.task}</div>
+          <div className="todo-content">
+            {item.task} by {item.author.name}
+          </div>
 
           <div>
             <button className="button-delete" onClick={updateTask}>

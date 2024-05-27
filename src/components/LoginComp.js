@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 
-const LoginComp = ({ loginUser, name, error }) => {
+const LoginComp = ({ loginUser, name, error, backToIntro }) => {
   const [password, setPassword] = useState("");
 
   const inputRef = useRef(null);
@@ -18,7 +18,12 @@ const LoginComp = ({ loginUser, name, error }) => {
     <div className="intro-area">
       <div>
         <h4 className="title">비밀번호를 입력해주세요:)</h4>
-        <div className="info">반갑습니다. {name ? name + "님" : "고객님"}</div>
+        <div className="info">
+          반갑습니다. {name ? name + "님" : "고객님"}
+          <span className="back" onClick={() => backToIntro()}>
+            ←back
+          </span>
+        </div>
       </div>
       <div className="input-area">
         <span className={error ? "alarm" : "disable"}>
@@ -33,7 +38,16 @@ const LoginComp = ({ loginUser, name, error }) => {
           onChange={(event) => setPassword(event.target.value)}
           onKeyDown={handleKeyPress}
         />
-        <button onClick={() => loginUser(password)}>확인</button>
+        <button
+          className={password ? "" : "disable"}
+          onClick={() => {
+            if (password) {
+              loginUser(password);
+            }
+          }}
+        >
+          확인
+        </button>
       </div>
     </div>
   );

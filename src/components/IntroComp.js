@@ -26,7 +26,16 @@ const IntroComp = ({ checkUser, error }) => {
           onChange={(event) => setEmail(event.target.value)}
           onKeyDown={handleKeyPress}
         />
-        <button onClick={() => checkUser(email)}>확인</button>
+        <button
+          className={email ? "" : "disable"}
+          onClick={() => {
+            if (email) {
+              checkUser(email);
+            }
+          }}
+        >
+          확인
+        </button>
       </div>
     </div>
   );

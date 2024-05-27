@@ -118,6 +118,11 @@ const IntroPage = ({ user, setUser }) => {
     return <Navigate to="/" />;
   }
 
+  const backToIntro = () => {
+    console.log("hello");
+    setCurrentComponent("IntroComp");
+  };
+
   return (
     <div className="common-area">
       <ComponentToRender
@@ -126,6 +131,7 @@ const IntroPage = ({ user, setUser }) => {
         loginUser={loginUser}
         name={name}
         error={error}
+        backToIntro={backToIntro}
       />
     </div>
   );

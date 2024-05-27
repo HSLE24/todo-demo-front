@@ -268,6 +268,29 @@ body {
   color: white;
 }
 
+.intro-area button.disable,
+.login-area button.disable {
+  background-color: #dce2f0;
+  color: gray;
+}
+
+.intro-area button.disable:hover,
+.login-area button.disable:hover {
+  background-color: #dce2f0;
+  color: gray;
+  outline: none;
+  border: none;
+}
+
+span.back {
+  color: crimson;
+  margin-left: 10px;
+}
+span.back:hover {
+  color: red;
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   .intro-area,
   .login-area,

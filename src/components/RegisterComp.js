@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 
-const RegisterComp = ({ registerUser, error }) => {
+const RegisterComp = ({ registerUser, error, backToIntro }) => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -28,7 +28,12 @@ const RegisterComp = ({ registerUser, error }) => {
     <div className="login-area">
       <div>
         <h4 className="title">별명과 비밀번호를 입력해주세요</h4>
-        <div className="info">1번만 입력하니 정확히 입력해주세요:)</div>
+        <div className="info">
+          1번만 입력하니 정확히 입력해주세요:)
+          <span className="back" onClick={() => backToIntro()}>
+            ←back
+          </span>
+        </div>
       </div>
       <div className="input-area">
         <span className={error ? "alarm" : "disable"}>
@@ -61,8 +66,17 @@ const RegisterComp = ({ registerUser, error }) => {
           type="checkbox"
           id="pass"
         />
-        <label for="pass">비밀번호 보기</label>
-        <button onClick={() => registerUser(name, password)}>확인</button>
+        <label htmlFor="pass">비밀번호 보기</label>
+        <button
+          className={password && name ? "" : "disable"}
+          onClick={() => {
+            if (name && password) {
+              registerUser(name, password);
+            }
+          }}
+        >
+          확인
+        </button>
       </div>
     </div>
   );
